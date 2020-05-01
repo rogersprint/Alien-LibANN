@@ -1,6 +1,5 @@
 use strict;
 use warnings;
-use inc::Devel::CheckLib;
 use Cwd ();
 use ExtUtils::MakeMaker;
 use File::Spec;
@@ -50,10 +49,10 @@ this version of libANN.
 
 If you answer "y", then we're going to install
     libANN:         $LIBANN_VERSION
-    Alient::LibANN: $VERSION
+    Alien::LibANN: $VERSION
 
 If you answer "n", then we're going to install
-    Alient::LibANN: $VERSION
+    Alien::LibANN: $VERSION
 
 This operation may OVERWRITE your previous installation, you've been warned!
 
@@ -79,6 +78,7 @@ WriteMakefile(
         'File::Spec'   => 0,
         'Archive::Tar' => 0,
         'IO::Zlib'     => 0,
+        'Devel::CheckLib'   => 0,
     },
     VERSION => $VERSION,
 );
